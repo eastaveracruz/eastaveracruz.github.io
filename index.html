@@ -2,3 +2,15 @@
 layout: default
 title: eastaveracruz
 ---
+
+
+<div class="row">
+    {% for post in site.posts %}
+        <div class="card">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <h5>{{ post.date | date: "%-d %B %Y" }}</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>{{ post.excerpt }}</p>
+        </div>
+    {% endfor %}
+</div>
